@@ -1,0 +1,46 @@
+version: '3.5'
+
+services:
+  jira-app:
+    container_name: jira-copy
+    image: jira-copy
+    build:
+      context: /Users/ddobrev/Desktop/jiraCopy/jira-copy/jira-copy
+      dockerfile: ../../Dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://postgres:5432/jira_copy
+
+  postgres:
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./jira-copyDB:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+     - "5672:5672"
+     - "15672:15672"
+    healthcheck:
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+
+
+

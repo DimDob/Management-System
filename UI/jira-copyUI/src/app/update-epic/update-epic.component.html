@@ -1,0 +1,20 @@
+<mat-dialog-content >
+    <ol>
+      <li>
+        <mat-form-field>
+          <mat-label>Enter the EpicId</mat-label>
+          <input matInput [(ngModel)]="epicId">
+        </mat-form-field>
+      </li>
+      <li>
+        <mat-form-field>
+          <mat-label>Enter the update parameters</mat-label>
+          <input matInput [(ngModel)]="updateParams">
+        </mat-form-field>
+      </li>
+      <li>
+        <button mat-raised-button (click)="updateEpicEntity()">Update</button>
+      </li>
+    </ol>
+  </mat-dialog-content>
+  

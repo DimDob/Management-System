@@ -1,0 +1,21 @@
+<ol>
+  <li>
+    <mat-form-field>
+      <mat-label id="label">Choose a name for the epic</mat-label>
+      <input matInput [(ngModel)]="name">
+    </mat-form-field>
+  </li>
+  <li>
+    <mat-form-field>
+      <mat-label id="label">Choose an assignee for the epic</mat-label>
+      <input matInput [(ngModel)]="assignee">
+    </mat-form-field>
+  </li>
+
+  <li>
+    <button mat-raised-button (click)="createEpicEntity()">Create</button>
+  </li>
+  <li *ngIf="name">
+    You chose: <i>{{name}}</i>
+  </li>
+</ol>

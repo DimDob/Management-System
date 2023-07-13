@@ -1,0 +1,19 @@
+button {
+    text-align: center;
+    margin-right: 25px; 
+    background-color: #0c120c08; 
+    color: white; 
+    border: none; 
+    padding: 10px 24px; 
+    font-size: 13px; 
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(238, 13, 13, 0.715); 
+    transition: background-color 0.3s ease; 
+  }
+  
+  button:hover {
+    background-color: #000000; 
+  }
+ 
+
+  

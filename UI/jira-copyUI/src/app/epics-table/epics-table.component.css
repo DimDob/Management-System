@@ -1,0 +1,20 @@
+#featuresBtn {
+    color: ghostwhite;
+    background-color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+  }
+  
+  #featuresBtn:hover {
+    background-color: grey;
+  }
+  
+  .showFeatures-container{
+    margin: 20px;
+    text-align: center;
+  }

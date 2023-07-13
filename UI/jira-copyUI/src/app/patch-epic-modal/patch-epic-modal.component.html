@@ -1,0 +1,27 @@
+<ol>
+    <li>
+      <mat-form-field>
+        <mat-label>Enter epicId</mat-label>
+        <input matInput [(ngModel)]="epicId">
+      </mat-form-field>
+    </li>
+    <li>
+
+     <li>
+        <mat-form-field>
+          <mat-label>Enter patch parameters</mat-label>
+          <input matInput [(ngModel)]="patchParams">
+        </mat-form-field>
+      </li>
+      <li>
+
+      <button mat-raised-button (click)="patchEpicEntity()" >Patch</button>
+    </li>   
+    <li *ngIf="epicId">
+      You chose: <i>{{epicId}}</i>
+    </li>
+  </ol>
+
+
+  
+  

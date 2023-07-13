@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <h1 id="header">Jira App</h1>
+  <div id="appTitle"></div>
+
+  <br />
+
+  
+  <label for="getEpics">Get epics: </label>
+  <button routerLink="/epics" id="getEpics" (click)="get()" target="_blank">Get Epics</button>
+
+  <br />
+  <br />
+
+  <form>
+    <label for="name">Create epic: </label>
+    <button id="createEpic" (click)="create($event)" target="_blank">
+      Create Epic
+    </button>
+  </form>
+
+  <br />
+
+  <form>
+    <label for="epicId">Fetch epic: </label>
+    <br />
+    <button #fetchButton id="fetchEpic" (click)="fetch($event)" target="_blank">
+      Fetch Epic
+    </button>
+  </form>
+
+  <br />
+
+  <form>
+    <label for="epicId">Update epic: </label>
+
+    <button type="submit" id="updateBtn" (click)="update($event)">
+      Update Epic by ID
+    </button>
+  </form>
+
+  <br />
+
+  <form>
+    <label for="deleteEpic">Delete Epic: </label>
+    <button type="submit" id="deleteBtn" (click)="delete($event)">
+      Delete epic
+    </button>
+  </form>
+
+  <br />
+
+  <form>
+    <label for="patchEpic">Patch epic: </label>
+    <button type="submit" id="patchBtn" (click)="patch($event)">
+      Patch epic
+    </button>
+  </form>
+
+  <div></div>
+
+  <form>
+    <label for="patchEpic">Delete all epics: </label>
+    <button type="submit" id="deleteAll" (click)="deleteAll($event)">
+      Delete all epics
+    </button>
+  </form>
+
+
+
+  <router-outlet></router-outlet>
+  
+</body>
+</html>

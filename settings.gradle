@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'https://repo.spring.io/snapshot' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'jira-copy'
+include 'integration'
+include 'integration'
+include 'integration'
+include 'integration'
+include 'src:test:integration'
+findProject(':src:test:integration')?.name = 'integration'
+include 'Notification'
+findProject(':Not:groovy')?.name = 'groovy'
+include 'engine'
+

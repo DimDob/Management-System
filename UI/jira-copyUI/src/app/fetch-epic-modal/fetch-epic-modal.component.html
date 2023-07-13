@@ -1,0 +1,14 @@
+<mat-dialog-content >
+    <ol>
+      <li>
+        <mat-form-field>
+          <mat-label>Enter the EpicId</mat-label>
+          <input matInput [(ngModel)]="epicId">
+        </mat-form-field>
+      </li>
+      <li>
+        <button mat-raised-button (click)="fetchEpicEntity()">Fetch</button>
+      </li>
+    </ol>
+  </mat-dialog-content>
+  
